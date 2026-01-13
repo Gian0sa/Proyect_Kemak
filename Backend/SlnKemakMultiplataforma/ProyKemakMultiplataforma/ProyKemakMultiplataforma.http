@@ -1,0 +1,6 @@
+@ProyKemakMultiplataforma_HostAddress = http://localhost:5288
+
+GET {{ProyKemakMultiplataforma_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

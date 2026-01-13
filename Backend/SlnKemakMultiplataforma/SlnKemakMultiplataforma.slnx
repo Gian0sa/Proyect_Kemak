@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Kemak.Application/Kemak.Application.csproj" />
+  <Project Path="Kemak.Domain/Kemak.Domain.csproj" />
+  <Project Path="Kemak.Infrastructure/Kemak.Infrastructure.csproj" />
+  <Project Path="ProyKemakMultiplataforma/ProyKemakMultiplataforma.csproj" />
+</Solution>

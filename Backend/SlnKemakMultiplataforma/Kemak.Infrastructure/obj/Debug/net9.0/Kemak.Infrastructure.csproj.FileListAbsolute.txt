@@ -1,0 +1,17 @@
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Infrastructure.deps.json
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Infrastructure.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Infrastructure.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Application.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Application.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\bin\Debug\net9.0\Kemak.Domain.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.csproj.AssemblyReference.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.AssemblyInfoInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.AssemblyInfo.cs
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.In.01BB211E.Up2Date
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\refint\Kemak.Infrastructure.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\ref\Kemak.Infrastructure.dll

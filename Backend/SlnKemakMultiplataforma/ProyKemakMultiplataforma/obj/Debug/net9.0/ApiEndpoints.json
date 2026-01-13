@@ -1,0 +1,601 @@
+[
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Logeo.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.AuthController",
+    "Method": "Registrar",
+    "RelativePath": "api/Auth/registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Logeo.UsuarioCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "GetAll",
+    "RelativePath": "api/Cliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "Create",
+    "RelativePath": "api/Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.ClienteDTO.ClienteCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "GetById",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "Update",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.ClienteDTO.ClienteCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "Delete",
+    "RelativePath": "api/Cliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "BuscarEnReniec",
+    "RelativePath": "api/Cliente/buscar-reniec/{dni}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ClienteController",
+    "Method": "GetByDni",
+    "RelativePath": "api/Cliente/dni/{dni}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ImagenController",
+    "Method": "GetById",
+    "RelativePath": "api/Imagen/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ImagenController",
+    "Method": "Update",
+    "RelativePath": "api/Imagen/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.ImagenDto.ImagenUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ImagenController",
+    "Method": "Delete",
+    "RelativePath": "api/Imagen/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ImagenController",
+    "Method": "GetByEntidad",
+    "RelativePath": "api/Imagen/{tipo}/{idEntidad}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ImagenController",
+    "Method": "Upload",
+    "RelativePath": "api/Imagen/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoEntidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEntidad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Orden",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.LicoreriaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Licoreria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.LicoreriaController",
+    "Method": "Post",
+    "RelativePath": "api/Licoreria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Licoreria.ProductoLicoreriaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.LicoreriaController",
+    "Method": "GetById",
+    "RelativePath": "api/Licoreria/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.LicoreriaController",
+    "Method": "Update",
+    "RelativePath": "api/Licoreria/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Licoreria.ProductoLicoreriaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.LicoreriaController",
+    "Method": "Delete",
+    "RelativePath": "api/Licoreria/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.MayoristaController",
+    "Method": "Get",
+    "RelativePath": "api/Mayorista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.MayoristaController",
+    "Method": "Post",
+    "RelativePath": "api/Mayorista",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Mayorista.ProductoMayoristaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.MayoristaController",
+    "Method": "Get",
+    "RelativePath": "api/Mayorista/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.MayoristaController",
+    "Method": "Put",
+    "RelativePath": "api/Mayorista/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.Mayorista.ProductoMayoristaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.MayoristaController",
+    "Method": "Delete",
+    "RelativePath": "api/Mayorista/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "Get",
+    "RelativePath": "api/Toldo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "Post",
+    "RelativePath": "api/Toldo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.ToldoDto.ToldoCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "Get",
+    "RelativePath": "api/Toldo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "Put",
+    "RelativePath": "api/Toldo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.ToldoDto.ToldoCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "Delete",
+    "RelativePath": "api/Toldo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.ToldoController",
+    "Method": "GetDisponibilidad",
+    "RelativePath": "api/Toldo/disponibilidad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.VentaController",
+    "Method": "Post",
+    "RelativePath": "api/Venta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.VentaDto.VentaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.VentaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Venta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.VentaController",
+    "Method": "GetById",
+    "RelativePath": "api/Venta/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.VentaController",
+    "Method": "RegistrarDevolucion",
+    "RelativePath": "api/Venta/registrar-devolucion",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Kemak.Application.DTOs.VentaDto.DevolucionToldoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.VentaController",
+    "Method": "GetResumenIngresos",
+    "RelativePath": "api/Venta/resumen-ingresos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyKemakMultiplataforma.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyKemakMultiplataforma.WeatherForecast, ProyKemakMultiplataforma, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

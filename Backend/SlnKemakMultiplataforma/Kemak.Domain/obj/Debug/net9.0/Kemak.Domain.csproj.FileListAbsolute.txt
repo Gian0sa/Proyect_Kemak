@@ -1,0 +1,12 @@
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\bin\Debug\net9.0\Kemak.Domain.deps.json
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\bin\Debug\net9.0\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\bin\Debug\net9.0\Kemak.Domain.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.csproj.AssemblyReference.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.AssemblyInfoInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.AssemblyInfo.cs
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.csproj.CoreCompileInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\refint\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\ref\Kemak.Domain.dll

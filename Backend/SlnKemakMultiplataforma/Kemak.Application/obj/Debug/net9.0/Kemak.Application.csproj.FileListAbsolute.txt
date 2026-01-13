@@ -1,0 +1,15 @@
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\bin\Debug\net9.0\Kemak.Application.deps.json
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\bin\Debug\net9.0\Kemak.Application.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\bin\Debug\net9.0\Kemak.Application.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\bin\Debug\net9.0\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\bin\Debug\net9.0\Kemak.Domain.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.csproj.AssemblyReference.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.AssemblyInfoInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.AssemblyInfo.cs
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.csproj.CoreCompileInputs.cache
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Ap.D85FE724.Up2Date
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\refint\Kemak.Application.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\Kemak.Application.pdb
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Application\obj\Debug\net9.0\ref\Kemak.Application.dll
