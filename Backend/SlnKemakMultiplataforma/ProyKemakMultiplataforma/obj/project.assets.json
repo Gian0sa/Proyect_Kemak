@@ -2092,7 +2092,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Kemak.Domain": "1.0.0"
+          "Kemak.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.1"
         },
         "compile": {
           "bin/placeholder/Kemak.Application.dll": {}
@@ -7035,7 +7036,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

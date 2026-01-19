@@ -22,8 +22,14 @@ export const imagenService = {
 
   // Obtener las imágenes de cualquier producto o toldo
   getByEntidad: async (tipo: string, id: number): Promise<ImagenDto[]> => {
-    const { data } = await api.get<ImagenDto[]>(`/Imagen/${tipo}/${id}`);
-    return data;
+    try {
+      const { data } = await api.get<ImagenDto[]>(`/Imagen/${tipo}/${id}`);
+      return data;
+    } catch (error: any) {
+      // Si el backend responde 404 porque no hay fotos, devolvemos array vacío para que no explote el front
+      if (error.response?.status === 404) return [];
+      throw error;
+    }
   },
 
   // Eliminar imagen de la DB y de Cloudinary

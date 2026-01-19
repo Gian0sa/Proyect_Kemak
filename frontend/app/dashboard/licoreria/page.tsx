@@ -322,7 +322,7 @@ export default function LicoreriaPage() {
                 <img src={productoPreview.imagenes[0].url} className="w-full h-full object-contain transform scale-95" alt="Producto" />
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-gray-300 uppercase font-black text-xs gap-3">
-                   <Package size={40} /> Sin Imagen
+                  <Package size={40} /> Sin Imagen
                 </div>
               )}
             </div>
@@ -339,15 +339,15 @@ export default function LicoreriaPage() {
               </div>
 
               <div className="flex justify-between items-center py-4 border-y dark:border-slate-800">
-                 <div>
-                   <p className="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Precio Venta</p>
-                   <p className="text-2xl sm:text-3xl font-black text-blue-600 leading-none">S/ {productoPreview.precio.toFixed(2)}</p>
-                 </div>
-                 <div className="text-right">
-                   <p className="text-[9px] font-black text-gray-400 uppercase">Stock</p>
-                   <p className={`text-lg font-black ${productoPreview.stock < 10 ? 'text-red-500' : 'text-gray-900 dark:text-white'}`}>
-                     {productoPreview.stock} <span className="text-[9px] font-bold">UND</span>
-                   </p>
+                <div>
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Precio Venta</p>
+                  <p className="text-2xl sm:text-3xl font-black text-blue-600 leading-none">S/ {productoPreview.precio.toFixed(2)}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-[9px] font-black text-gray-400 uppercase">Stock</p>
+                  <p className={`text-lg font-black ${productoPreview.stock < 10 ? 'text-red-500' : 'text-gray-900 dark:text-white'}`}>
+                    {productoPreview.stock} <span className="text-[9px] font-bold">UND</span>
+                  </p>
                  </div>
               </div>
 

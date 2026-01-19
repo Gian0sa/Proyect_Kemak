@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kemak.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd3acb295c30aa2c1104919015c532791a3cd279")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kemak.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kemak.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

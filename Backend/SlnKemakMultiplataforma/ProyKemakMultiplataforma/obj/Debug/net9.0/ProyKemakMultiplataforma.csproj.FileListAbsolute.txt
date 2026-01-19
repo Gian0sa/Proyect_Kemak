@@ -154,3 +154,4 @@ D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\ProyKemakMultiplataf
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\ProyKemakMultiplataforma\obj\Debug\net9.0\ProyKemakMultiplataforma.pdb
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\ProyKemakMultiplataforma\obj\Debug\net9.0\ProyKemakMultiplataforma.genruntimeconfig.cache
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\ProyKemakMultiplataforma\obj\Debug\net9.0\ref\ProyKemakMultiplataforma.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\ProyKemakMultiplataforma\obj\Debug\net9.0\ProyKemakMultiplataforma.sourcelink.json

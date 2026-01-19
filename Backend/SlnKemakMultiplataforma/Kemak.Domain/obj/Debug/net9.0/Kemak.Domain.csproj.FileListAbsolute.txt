@@ -10,3 +10,4 @@ D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Deb
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\refint\Kemak.Domain.dll
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.pdb
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\ref\Kemak.Domain.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Domain\obj\Debug\net9.0\Kemak.Domain.sourcelink.json

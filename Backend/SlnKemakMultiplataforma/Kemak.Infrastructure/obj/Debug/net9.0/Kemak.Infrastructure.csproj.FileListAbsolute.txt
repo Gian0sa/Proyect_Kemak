@@ -15,3 +15,4 @@ D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\refint\Kemak.Infrastructure.dll
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.pdb
 D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\ref\Kemak.Infrastructure.dll
+D:\Descargas\Proyecto Kemak\Backend\SlnKemakMultiplataforma\Kemak.Infrastructure\obj\Debug\net9.0\Kemak.Infrastructure.sourcelink.json

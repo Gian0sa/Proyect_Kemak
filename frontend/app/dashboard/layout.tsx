@@ -28,6 +28,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { name: 'Licorería', path: '/dashboard/licoreria', icon: <Wine size={18}/>, color: 'text-blue-400' },
     { name: 'Mayorista', path: '/dashboard/mayorista', icon: <Package size={18}/> },
     { name: 'Toldos', path: '/dashboard/toldos', icon: <Tent size={18}/> },
+    { name: 'Imagenes', path: '/dashboard/imagenes', icon: <Tent size={18}/> },
+    { name: 'Ventas', path: '/dashboard/ventas', icon: <Tent size={18}/> },
   ];
 
   return (

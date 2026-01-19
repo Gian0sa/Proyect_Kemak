@@ -316,7 +316,8 @@
       },
       "Kemak.Application/1.0.0": {
         "dependencies": {
-          "Kemak.Domain": "1.0.0"
+          "Kemak.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.1"
         },
         "runtime": {
           "Kemak.Application.dll": {
