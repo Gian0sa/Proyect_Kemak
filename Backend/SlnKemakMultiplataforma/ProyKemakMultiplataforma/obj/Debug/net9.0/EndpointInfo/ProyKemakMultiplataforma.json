@@ -815,18 +815,6 @@
         }
       }
     },
-    "/api/Venta/resumen-ingresos": {
-      "get": {
-        "tags": [
-          "Venta"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Venta": {
       "post": {
         "tags": [
@@ -857,6 +845,18 @@
           }
         }
       },
+      "get": {
+        "tags": [
+          "Venta"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Venta/resumen-ingresos": {
       "get": {
         "tags": [
           "Venta"

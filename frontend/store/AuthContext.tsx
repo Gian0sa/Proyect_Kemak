@@ -16,7 +16,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthResponse | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // 1. Efecto de Hidratación: Recupera la sesión al cargar la página
   useEffect(() => {
     const stored = localStorage.getItem('auth');
     if (stored) {
@@ -25,14 +24,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setIsLoading(false);
   }, []);
 
-  // 2. Función de Login: Guarda en LocalStorage (para el UI) y Cookies (para el Middleware)
   const login = (data: AuthResponse) => {
     setUser(data);
     
-    // Guardamos el objeto completo para el uso diario en componentes
+
     localStorage.setItem('auth', JSON.stringify(data));
-    
-    // Guardamos el token en Cookie para que el middleware.ts tenga acceso
+
     Cookies.set('auth_token', data.token, { 
       expires: 1, 
       secure: process.env.NODE_ENV === 'production', 

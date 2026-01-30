@@ -10,6 +10,6 @@ namespace Kemak.Application.DTOs
     {
         public int StatusCode { get; set; }
         public string? Message { get; set; }
-        public string? Detail { get; set; } // Aquí pondremos el "Stack Trace" solo en desarrollo
+        public string? Detail { get; set; } 
     }
 }

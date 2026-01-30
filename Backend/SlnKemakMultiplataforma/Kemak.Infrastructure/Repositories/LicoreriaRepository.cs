@@ -15,7 +15,7 @@ public class LicoreriaRepository : ILicoreriaRepository
     private readonly KemakDbContext _context;
     private readonly IDistributedCache _cache;
     private const string CacheKeyPrefix = "licor_";
-    private const string AllLicorCacheKey = "licor_all_v3"; // Llave actualizada para forzar refresco
+    private const string AllLicorCacheKey = "licor_all_v3"; 
 
     public LicoreriaRepository(KemakDbContext context, IDistributedCache cache)
     {

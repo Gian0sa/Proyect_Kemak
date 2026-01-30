@@ -95,7 +95,7 @@ export default function POSPage() {
 
   const totalVenta = carrito.reduce((acc, item) => acc + (item.precioUnitario * item.cantidad), 0);
 
-  const handleFinalizar = async () => {
+ const handleFinalizar = async () => {
     if (!cliente || carrito.length === 0) return alert("Faltan datos del cliente o productos en la boleta.");
 
     try {
@@ -110,22 +110,25 @@ export default function POSPage() {
         }))
       };
 
-
+      // 1. Registro de la venta
       await ventaService.registrar(ventaDto);
       
-      alert("¡Transacción Exitosa! El stock ha sido actualizado en PostgreSQL.");
+      alert("¡Transacción Exitosa! El stock se ha actualizado.");
 
-
-      await cargarCatalogoReal();
+      // ⚡ 2. PEQUEÑA ESPERA PARA CONSISTENCIA DE REDIS
+      // Esto da tiempo a que el borrado en el Backend termine de propagarse
+      setTimeout(async () => {
+          await cargarCatalogoReal();
+      }, 600); // 600ms es el tiempo ideal de seguridad
       
       setCarrito([]);
       setCliente(null);
       setDniBusqueda("");
     } catch (e: any) { 
         console.error(e);
-        alert(e.response?.data || "Error técnico: El stock en el servidor ha cambiado."); 
+        alert(e.response?.data || "Error técnico al procesar venta."); 
     }
-  };
+};
 
   return (
     <div className="flex h-[calc(100vh-100px)] gap-6 p-6 bg-slate-50 font-sans">

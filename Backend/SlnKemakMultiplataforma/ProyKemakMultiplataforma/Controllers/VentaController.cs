@@ -17,23 +17,7 @@ public class VentaController : ControllerBase
     {
         _ventaRepository = ventaRepository;
     }
-    [HttpGet("resumen-ingresos")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> GetResumenIngresos()
-    {
-        var ventas = await _ventaRepository.GetAllVentasAsync();
 
-        var resumen = new
-        {
-            TotalRecaudado = ventas.Sum(v => v.Total),
-            VentasLicoreria = ventas.Where(v => v.TipoVenta == "LICORERIA").Sum(v => v.Total),
-            VentasMayorista = ventas.Where(v => v.TipoVenta == "MAYORISTA").Sum(v => v.Total),
-            AlquilerToldos = ventas.Where(v => v.TipoVenta == "TOLDO").Sum(v => v.Total),
-            CantidadOperaciones = ventas.Count()
-        };
-
-        return Ok(resumen);
-    }
     [HttpPost]
     [Authorize(Roles = "Admin,Vendedor_Licoreria,Vendedor_Mayorista,Vendedor_Toldos")]
     public async Task<IActionResult> Post([FromBody] VentaCreateDTO dto)
@@ -68,19 +52,19 @@ public class VentaController : ControllerBase
 
                 alquiler = new AlquilerToldo
                 {
-                    // Conversión de tipos para PostgreSQL
                     FechaInicio = DateOnly.FromDateTime(dto.FechaInicio.Value),
                     FechaFin = DateOnly.FromDateTime(dto.FechaFin.Value),
                     Estado = "ACTIVO"
                 };
             }
 
+            // Aquí sucede la magia: guarda en PostgreSQL y limpia Redis automáticamente
             var resultado = await _ventaRepository.RegistrarVentaAsync(nuevaVenta, detallesEntidad, alquiler);
 
             return CreatedAtAction(nameof(GetById), new { id = resultado.IdVenta }, new
             {
                 idVenta = resultado.IdVenta,
-                mensaje = "Transacción completada con éxito."
+                mensaje = "Transacción completada y stock actualizado en tiempo real."
             });
         }
         catch (Exception ex)
@@ -89,36 +73,44 @@ public class VentaController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Authorize(Roles = "Admin,Vendedor_Licoreria,Vendedor_Mayorista,Vendedor_Toldos")]
-    public async Task<IActionResult> GetAll()
+    [HttpGet("resumen-ingresos")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetResumenIngresos()
     {
         var ventas = await _ventaRepository.GetAllVentasAsync();
-        return Ok(ventas);
+        var resumen = new
+        {
+            TotalRecaudado = ventas.Sum(v => v.Total),
+            VentasLicoreria = ventas.Where(v => v.TipoVenta == "LICORERIA").Sum(v => v.Total),
+            VentasMayorista = ventas.Where(v => v.TipoVenta == "MAYORISTA").Sum(v => v.Total),
+            AlquilerToldos = ventas.Where(v => v.TipoVenta == "TOLDO").Sum(v => v.Total),
+            CantidadOperaciones = ventas.Count()
+        };
+        return Ok(resumen);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAll() => Ok(await _ventaRepository.GetAllVentasAsync());
+
     [HttpGet("{id}")]
-    [Authorize(Roles = "Admin,Vendedor_Licoreria,Vendedor_Mayorista,Vendedor_Toldos")]
     public async Task<IActionResult> GetById(int id)
     {
         var venta = await _ventaRepository.GetVentaByIdAsync(id);
-        if (venta == null) return NotFound();
-        return Ok(venta);
+        return venta == null ? NotFound() : Ok(venta);
     }
+
     [HttpPatch("registrar-devolucion")]
     [Authorize(Roles = "Admin,Vendedor_Toldos")]
     public async Task<IActionResult> RegistrarDevolucion([FromBody] DevolucionToldoDTO dto)
     {
         try
         {
-            // Llamamos al repositorio para actualizar las 3 cosas: fecha, estado y obs
             await _ventaRepository.RegistrarDevolucionAsync(dto.IdAlquiler, dto.Observaciones, dto.Estado);
-
-            return Ok(new { mensaje = $"Alquiler {dto.IdAlquiler} marcado como {dto.Estado} correctamente." });
+            return Ok(new { mensaje = "Devolución registrada." });
         }
         catch (Exception ex)
         {
-            return StatusCode(500, $"Error al registrar devolución: {ex.Message}");
+            return StatusCode(500, $"Error: {ex.Message}");
         }
     }
 }
