@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kemak.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71a193648fd289bf225f66759c53d1fb050fddea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c44911ad5e83f2133fbe016990ba24568cbf031c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kemak.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kemak.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
