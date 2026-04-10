@@ -2,11 +2,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { AuthResponse } from '@/services/auth.service';
 import Cookies from 'js-cookie';
+import { signOut } from 'next-auth/react'; // <--- IMPORTANTE
 
 interface AuthContextType {
   user: AuthResponse | null;
   login: (data: AuthResponse) => void;
-  logout: () => void;
+  logout: () => Promise<void>; // Ahora es una Promesa
   isLoading: boolean; 
 }
 
@@ -19,17 +20,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const stored = localStorage.getItem('auth');
     if (stored) {
-      setUser(JSON.parse(stored));
+      try {
+        setUser(JSON.parse(stored));
+      } catch (error) {
+        console.error("Error parsing auth data", error);
+        localStorage.removeItem('auth');
+      }
     }
     setIsLoading(false);
   }, []);
 
   const login = (data: AuthResponse) => {
     setUser(data);
-    
-
     localStorage.setItem('auth', JSON.stringify(data));
 
+    // Seteamos cookie para middleware o peticiones del servidor
     Cookies.set('auth_token', data.token, { 
       expires: 1, 
       secure: process.env.NODE_ENV === 'production', 
@@ -37,13 +42,29 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const logout = async () => {
+    try {
+      // 1. Limpiamos la sesión de Google / NextAuth
+      // redirect: false evita que NextAuth te mande a su página por defecto
+      await signOut({ redirect: false });
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('auth');
-    Cookies.remove('auth_token');
-    
-    window.location.href = '/auth/login';
+      // 2. Limpiamos el estado local de React
+      setUser(null);
+
+      // 3. Limpiamos persistencia manual
+      localStorage.removeItem('auth');
+      Cookies.remove('auth_token');
+
+      // 4. Redirección limpia al Login
+      // Usamos replace para que el usuario no pueda darle "atrás" y volver al dashboard
+      window.location.href = '/auth/login';
+      
+    } catch (error) {
+      console.error("Error durante el logout:", error);
+      // Fallback: si falla signOut, igual limpiamos lo local
+      localStorage.removeItem('auth');
+      window.location.href = '/auth/login';
+    }
   };
 
   return (
@@ -53,7 +74,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Hook personalizado para usar el contexto en cualquier parte
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {

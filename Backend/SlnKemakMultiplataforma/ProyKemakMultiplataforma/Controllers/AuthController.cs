@@ -1,6 +1,8 @@
-﻿using Kemak.Application.DTOs.Logeo;
+﻿using Kemak.Application.DTOs.GoogleDto;
+using Kemak.Application.DTOs.Logeo;
 using Kemak.Application.Interfaces;
 using Kemak.Domain.Models;
+using Kemak.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProyKemakMultiplataforma.Controllers
@@ -11,11 +13,13 @@ namespace ProyKemakMultiplataforma.Controllers
     {
         private readonly IAuthRepository _authRepo;
         private readonly ITokenService _tokenService;
+        private readonly IWhatsappService _whatsappService;
 
-        public AuthController(IAuthRepository authRepo, ITokenService tokenService)
+        public AuthController(IAuthRepository authRepo, ITokenService tokenService, IWhatsappService whatsappService)
         {
             _authRepo = authRepo;
             _tokenService = tokenService;
+            _whatsappService = whatsappService;
         }
 
         [HttpPost("registrar")]
@@ -56,6 +60,8 @@ namespace ProyKemakMultiplataforma.Controllers
                 Roles = roles
             });
         }
+
+        //
         [HttpPost("logout")]
         public IActionResult Logout()
         {
@@ -65,5 +71,46 @@ namespace ProyKemakMultiplataforma.Controllers
             // 2. Retornamos un mensaje de éxito para que el Frontend sepa que debe limpiar su estado
             return Ok(new { mensaje = "Sesión cerrada correctamente" });
         }
+
+        [HttpPost("google")]
+        public async Task<IActionResult> GoogleAuth([FromBody] GoogleAuthDto dto)
+        {
+            // 1. Verificar si el usuario ya existe por Email
+            var usuario = await _authRepo.ObtenerUsuarioPorEmail(dto.Email);
+            bool esNuevo = false;
+
+            if (usuario == null)
+            {
+                // 2. REGISTRO AUTOMÁTICO: Si no existe, lo creamos con la info de Google
+                usuario = new Usuario
+                {
+                    // Limpiamos el nombre para que sea un Username válido (sin espacios)
+                    Username = dto.Name.Replace(" ", "").ToLower() + Guid.NewGuid().ToString().Substring(0, 4),
+                    Email = dto.Email.ToLower(),
+                    Estado = 1,
+                    FechaCreacion = DateTime.Now
+                };
+
+                await _authRepo.RegistrarExterno(usuario);
+                esNuevo = true;
+            }
+
+            // 3. GENERAR CREDENCIALES DE KEMAK (JWT)
+            var roles = await _authRepo.ObtenerRolesUsuario(usuario.IdUsuario);
+            var token = _tokenService.CrearToken(usuario, roles);
+
+            // 4. RESPUESTA AL FRONTEND
+            return Ok(new LoginResponseDto
+            {
+                Token = token,
+                Username = usuario.Username,
+                Email = usuario.Email ?? "",
+                Roles = roles,
+           
+                IsNewUser = esNuevo
+            });
+        }
+
     }
+
 }

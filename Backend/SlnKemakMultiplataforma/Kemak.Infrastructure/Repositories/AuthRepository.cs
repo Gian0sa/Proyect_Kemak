@@ -62,5 +62,24 @@ namespace Kemak.Infrastructure.Repositories
                 .SelectMany(u => u.IdRols.Select(r => r.Nombre))
                 .ToListAsync();
         }
+        public async Task<Usuario?> ObtenerUsuarioPorEmail(string email)
+        {
+            return await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Email.ToLower() == email.ToLower());
+        }
+
+        public async Task<Usuario> RegistrarExterno(Usuario usuario)
+        {
+            // 1. Asignamos rol "Cliente" por defecto
+            var rolCliente = await _context.Rols.FirstOrDefaultAsync(r => r.Nombre == "Cliente");
+            if (rolCliente != null) usuario.IdRols.Add(rolCliente);
+
+            // 2. Al ser Google, el PasswordHash puede ir vacío o con un valor genérico
+            usuario.PasswordHash = "EXTERNAL_AUTH_GOOGLE";
+
+            await _context.Usuarios.AddAsync(usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
+        }
     }
 }

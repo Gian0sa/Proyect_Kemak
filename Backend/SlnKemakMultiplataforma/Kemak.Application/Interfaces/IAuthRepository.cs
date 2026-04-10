@@ -13,5 +13,9 @@ namespace Kemak.Application.Interfaces
         Task<Usuario?> Login(string email, string password);
         Task<bool> ExisteUsuario(string username);
         Task<List<string>> ObtenerRolesUsuario(int usuarioId);
+
+
+        Task<Usuario?> ObtenerUsuarioPorEmail(string email);
+        Task<Usuario> RegistrarExterno(Usuario usuario);
     }
 }

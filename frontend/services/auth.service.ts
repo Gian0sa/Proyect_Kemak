@@ -19,12 +19,27 @@ export interface AuthResponse {
   roles: string[];
 }
 
+export interface GoogleAuthDto {
+  email: string;
+  name: string;
+  googleId: string;
+  photoUrl?: string;
+}
+
 export const authService = {
   // POST: api/Auth/registrar
 registrar: async (dto: UsuarioCreateDto): Promise<{ mensaje: string }> => {
     const { data } = await api.post('/Auth/registrar', dto);
     return data;
 },
+
+googleAuth: async (dto: GoogleAuthDto): Promise<AuthResponse> => {
+    const { data } = await api.post<AuthResponse>('/Auth/google', dto);
+    if (data.token) {
+      localStorage.setItem('auth', JSON.stringify(data));
+    }
+    return data;
+  },
 
   // POST: api/Auth/login
 login: async (dto: LoginDto): Promise<AuthResponse> => {

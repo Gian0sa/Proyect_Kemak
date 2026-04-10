@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/store/AuthContext";
+import { Providers } from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        {/* SCRIPT DE BLOQUEO: Evita parpadeos y gestiona el cambio de tema */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -49,9 +49,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300`}
       >
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        {/* Usamos un componente wrapper para no volver este layout 'use client' */}
+        <Providers> 
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -79,6 +79,37 @@
         }
       }
     },
+    "/api/Auth/google": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAuthDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAuthDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAuthDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cliente": {
       "get": {
         "tags": [
@@ -1038,6 +1069,28 @@
         },
         "additionalProperties": false
       },
+      "GoogleAuthDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "googleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ImagenReadDto": {
         "type": "object",
         "properties": {
@@ -1089,6 +1142,9 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          },
+          "isNewUser": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1120,7 +1176,7 @@
           },
           "precio": {
             "maximum": 10000,
-            "minimum": 0.01,
+            "minimum": 0,01,
             "type": "number",
             "format": "double"
           },
@@ -1189,7 +1245,7 @@
           },
           "precio": {
             "maximum": 50000,
-            "minimum": 0.01,
+            "minimum": 0,01,
             "type": "number",
             "format": "double"
           },
@@ -1230,7 +1286,7 @@
           },
           "precioAlquiler": {
             "maximum": 5000,
-            "minimum": 0.01,
+            "minimum": 0,01,
             "type": "number",
             "format": "double"
           }

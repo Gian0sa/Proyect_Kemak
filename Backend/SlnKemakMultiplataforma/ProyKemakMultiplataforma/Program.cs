@@ -33,6 +33,7 @@ builder.Services.AddScoped<IToldoRepository, ToldoRepository>();
 builder.Services.AddScoped<IImagenRepository, ImagenRepository>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 builder.Services.AddScoped<IVentaRepository, VentaRepository>();
+builder.Services.AddHttpClient<IWhatsappService, WhatsappService>();
 
 builder.Services.AddHttpClient<ConsultaExternaService>();
 

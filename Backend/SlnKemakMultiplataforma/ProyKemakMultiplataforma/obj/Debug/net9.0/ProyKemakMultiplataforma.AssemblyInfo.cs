@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyKemakMultiplataforma")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c44911ad5e83f2133fbe016990ba24568cbf031c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ad1796849e8afe6d12b6f9afd128b0b5afaae1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyKemakMultiplataforma")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyKemakMultiplataforma")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,5 +10,7 @@ namespace Kemak.Application.DTOs.Logeo
 
         [Required(ErrorMessage = "La contraseña es obligatoria.")]
         public string Password { get; set; } = string.Empty;
+
+        public bool IsNewUser { get; set; }
     }
 }

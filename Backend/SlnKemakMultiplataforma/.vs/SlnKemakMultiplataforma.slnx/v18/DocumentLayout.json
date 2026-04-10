@@ -3,16 +3,68 @@
   "WorkspaceRootPath": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|solutionrelative:kemak.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\services\\iwhatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\services\\iwhatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\googledto\\googleauthdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\googledto\\googleauthdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\googledto\\googlelogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\googledto\\googlelogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +75,8 @@
       "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\services\\consultaexternaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\repositories\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\repositories\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|solutionrelative:kemak.infrastructure\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\itemventum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\alquilertoldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|solutionrelative:kemak.domain\\models\\alquilertoldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -92,14 +124,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\external.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\external.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD48FF2F-52E3-C90A-6C17-BF92F2BFA44E}|Kemak.Infrastructure\\Kemak.Infrastructure.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -144,10 +168,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\vwdisponibilidadtoldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|solutionrelative:kemak.domain\\models\\vwdisponibilidadtoldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|solutionrelative:kemak.domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A66612EC-407E-28BC-F721-9AD0089A3DC6}|Kemak.Domain\\Kemak.Domain.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.domain\\models\\vwventascompleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -233,10 +253,6 @@
       "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\dtos\\logeo\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\dtos\\logeo\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\proykemakmultiplataforma\\middlewares\\middlewares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C73EC21-6727-8FF7-2FC4-0E5AB77832CC}|ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj|solutionrelative:proykemakmultiplataforma\\middlewares\\middlewares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -281,10 +297,6 @@
       "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\kemak.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|d:\\descargas\\proyecto kemak\\backend\\slnkemakmultiplataforma\\kemak.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D775DB4-2DE9-E5AD-6917-FDB1FE96D2C6}|Kemak.Application\\Kemak.Application.csproj|solutionrelative:kemak.application\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -316,32 +328,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:28:06.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IAuthRepository.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IAuthRepository.cs",
+              "RelativeToolTip": "Kemak.Application\\Interfaces\\IAuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:27:38.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
+              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:49:50.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
+              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:50:08.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T14:32:56.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Program.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Program.cs",
               "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Program.cs",
               "RelativeToolTip": "ProyKemakMultiplataforma\\Program.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAADwv3UAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-29T18:02:55.805Z"
+              "WhenOpened": "2025-12-29T18:02:55.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\appsettings.json",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\appsettings.json",
               "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\appsettings.json",
               "RelativeToolTip": "ProyKemakMultiplataforma\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-29T18:02:57.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAwwHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:31:02.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioCreateDto.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
+              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:50:15.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Usuario.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Usuario.cs",
+              "RelativeToolTip": "Kemak.Domain\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:42:54.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IWhatsappService.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\IWhatsappService.cs",
+              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Services\\IWhatsappService.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\IWhatsappService.cs",
+              "RelativeToolTip": "Kemak.Infrastructure\\Services\\IWhatsappService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T13:59:30.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CloudinaryService.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\CloudinaryService.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Services\\CloudinaryService.cs",
@@ -349,24 +479,51 @@
               "RelativeToolTip": "Kemak.Infrastructure\\Services\\CloudinaryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T21:02:58.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Services\\TokenService.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\TokenService.cs",
-              "RelativeToolTip": "Kemak.Infrastructure\\Services\\TokenService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:01:40.711Z",
+              "WhenOpened": "2025-12-30T21:02:58.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
+              "Title": "GoogleAuthDto.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\GoogleDto\\GoogleAuthDto.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\GoogleDto\\GoogleAuthDto.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\GoogleDto\\GoogleAuthDto.cs",
+              "RelativeToolTip": "Kemak.Application\\DTOs\\GoogleDto\\GoogleAuthDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T13:51:05.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GoogleLoginDto.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\GoogleDto\\GoogleLoginDto.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\GoogleDto\\GoogleLoginDto.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\GoogleDto\\GoogleLoginDto.cs",
+              "RelativeToolTip": "Kemak.Application\\DTOs\\GoogleDto\\GoogleLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T13:51:14.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T16:51:29.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ItemVentum.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\ItemVentum.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\ItemVentum.cs",
@@ -378,7 +535,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "Kemak.Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T17:01:40.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ConsultaExternaService.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Services\\ConsultaExternaService.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Services\\ConsultaExternaService.cs",
@@ -390,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 15,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\ClienteController.cs",
@@ -403,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "VentaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\VentaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\VentaRepository.cs",
@@ -415,44 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ProyKemakMultiplataforma\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDAAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:31:02.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "Kemak.Infrastructure\\Repositories\\AuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:28:06.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClienteRepository.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
-              "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
-              "RelativeToolTip": "Kemak.Infrastructure\\Repositories\\ClienteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T14:32:56.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "ProductoLicorerium.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\ProductoLicorerium.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\ProductoLicorerium.cs",
@@ -464,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Rol.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Rol.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Rol.cs",
@@ -476,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "ICloudinaryService.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\ICloudinaryService.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\ICloudinaryService.cs",
@@ -488,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "IClienteRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IClienteRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IClienteRepository.cs",
@@ -500,19 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IAuthRepository.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IAuthRepository.cs",
-              "RelativeToolTip": "Kemak.Application\\Interfaces\\IAuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:27:38.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "External.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\External.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\External.cs",
@@ -524,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Class1.cs",
@@ -536,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "DetalleVentum.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\DetalleVentum.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\DetalleVentum.cs",
@@ -548,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "ProductoMayoristum.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\ProductoMayoristum.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\ProductoMayoristum.cs",
@@ -560,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "IMayoristaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IMayoristaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IMayoristaRepository.cs",
@@ -572,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "AlquilerToldo.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\AlquilerToldo.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\AlquilerToldo.cs",
@@ -584,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "KemakDbContext.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Data\\KemakDbContext.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Data\\KemakDbContext.cs",
@@ -596,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
@@ -606,31 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
-              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T16:50:08.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
-              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T16:49:50.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "LicoreriaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\LicoreriaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\LicoreriaRepository.cs",
@@ -642,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "VentaController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\VentaController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\VentaController.cs",
@@ -654,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "MayoristaController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\MayoristaController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\MayoristaController.cs",
@@ -666,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "MayoristaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\MayoristaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\MayoristaRepository.cs",
@@ -678,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "ToldoController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\ToldoController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\ToldoController.cs",
@@ -690,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "ToldoRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ToldoRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\ToldoRepository.cs",
@@ -702,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "ImagenController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\ImagenController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\ImagenController.cs",
@@ -714,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "ImagenRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Repositories\\ImagenRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Repositories\\ImagenRepository.cs",
@@ -726,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\WeatherForecast.cs",
@@ -738,19 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Usuario.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Usuario.cs",
-              "RelativeToolTip": "Kemak.Domain\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:42:54.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "VwVentasCompleta.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\VwVentasCompleta.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\VwVentasCompleta.cs",
@@ -762,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "VwDisponibilidadToldo.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\VwDisponibilidadToldo.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\VwDisponibilidadToldo.cs",
@@ -774,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "ProductoMayoristaDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Mayorista\\ProductoMayoristaDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Mayorista\\ProductoMayoristaDTO.cs",
@@ -786,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "CloudinaryResponseDto.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ImagenDto\\CloudinaryResponseDto.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ImagenDto\\CloudinaryResponseDto.cs",
@@ -798,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
@@ -807,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Properties\\launchSettings.json",
@@ -819,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "ProductoMayoristaCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Mayorista\\ProductoMayoristaCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Mayorista\\ProductoMayoristaCreateDTO.cs",
@@ -831,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "ProyKemakMultiplataforma.http",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\ProyKemakMultiplataforma.http",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\ProyKemakMultiplataforma.http",
@@ -843,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "LicoreriaController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\LicoreriaController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\LicoreriaController.cs",
@@ -855,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "ILicoreriaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\ILicoreriaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\ILicoreriaRepository.cs",
@@ -867,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "ToldoDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ToldoDto\\ToldoDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ToldoDto\\ToldoDTO.cs",
@@ -879,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "ToldoCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ToldoDto\\ToldoCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ToldoDto\\ToldoCreateDTO.cs",
@@ -891,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "IToldoRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IToldoRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IToldoRepository.cs",
@@ -903,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "ProductoLicoreriaDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Licoreria\\ProductoLicoreriaDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Licoreria\\ProductoLicoreriaDTO.cs",
@@ -915,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "ItemProductoLicorerium.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\ItemProductoLicorerium.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\ItemProductoLicorerium.cs",
@@ -927,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "IImagenRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IImagenRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IImagenRepository.cs",
@@ -939,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "ProductoLicoreriaCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Licoreria\\ProductoLicoreriaCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Licoreria\\ProductoLicoreriaCreateDTO.cs",
@@ -951,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "ImagenCreateDto.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ImagenDto\\ImagenCreateDto.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ImagenDto\\ImagenCreateDto.cs",
@@ -963,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "ImagenReadDto.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ImagenDto\\ImagenReadDto.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ImagenDto\\ImagenReadDto.cs",
@@ -975,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "ImagenUpdateDto.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ImagenDto\\ImagenUpdateDto.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ImagenDto\\ImagenUpdateDto.cs",
@@ -987,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "Imagen.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Imagen.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Imagen.cs",
@@ -999,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Controllers\\WeatherForecastController.cs",
@@ -1011,19 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "UsuarioCreateDto.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
-              "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
-              "RelativeToolTip": "Kemak.Application\\DTOs\\Logeo\\UsuarioCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T16:50:15.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "Middlewares.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\Middlewares\\Middlewares.cs",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\Middlewares\\Middlewares.cs",
@@ -1035,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "ClienteDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ClienteDTO\\ClienteDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ClienteDTO\\ClienteDTO.cs",
@@ -1047,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "ClienteCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\ClienteDTO\\ClienteCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\ClienteDTO\\ClienteCreateDTO.cs",
@@ -1059,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "IVentaRepository.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IVentaRepository.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IVentaRepository.cs",
@@ -1071,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "DevolucionToldoDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\VentaDto\\DevolucionToldoDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\VentaDto\\DevolucionToldoDTO.cs",
@@ -1083,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "VentaReadDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\VentaDto\\VentaReadDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\VentaDto\\VentaReadDTO.cs",
@@ -1095,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "VentaCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\VentaDto\\VentaCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\VentaDto\\VentaCreateDTO.cs",
@@ -1107,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "DetalleVentaCreateDTO.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\DTOs\\VentaDto\\DetalleVentaCreateDTO.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\DTOs\\VentaDto\\DetalleVentaCreateDTO.cs",
@@ -1119,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "ProyKemakMultiplataforma.csproj",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj",
               "RelativeDocumentMoniker": "ProyKemakMultiplataforma\\ProyKemakMultiplataforma.csproj",
@@ -1131,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "Cliente.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Cliente.cs",
@@ -1143,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "Kemak.Application.csproj",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Kemak.Application.csproj",
               "RelativeDocumentMoniker": "Kemak.Application\\Kemak.Application.csproj",
@@ -1155,19 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "IUsuarioRepository.cs",
-              "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
-              "ToolTip": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
-              "RelativeToolTip": "Kemak.Application\\Interfaces\\IUsuarioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T16:51:29.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Application\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "Kemak.Application\\Interfaces\\ITokenService.cs",
@@ -1179,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "Kemak.Infrastructure.csproj",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Infrastructure\\Kemak.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Kemak.Infrastructure\\Kemak.Infrastructure.csproj",
@@ -1191,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "Toldo.cs",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Models\\Toldo.cs",
               "RelativeDocumentMoniker": "Kemak.Domain\\Models\\Toldo.cs",
@@ -1203,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "Kemak.Domain.csproj",
               "DocumentMoniker": "D:\\Descargas\\Proyecto Kemak\\Backend\\SlnKemakMultiplataforma\\Kemak.Domain\\Kemak.Domain.csproj",
               "RelativeDocumentMoniker": "Kemak.Domain\\Kemak.Domain.csproj",
