@@ -1,30 +1,27 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { toldoService, imagenService, ToldoDTO, ToldoCreateDTO } from '@/services';
-import { Plus, Search, Edit, Trash2, Eye, X, Upload, Loader2, Tent, Calendar, ChevronRight, ChevronLeft } from 'lucide-react';
+import { 
+  Plus, Search, Edit, Trash2, Eye, X, Upload, 
+  Loader2, Tent, Calendar, ChevronRight, ChevronLeft,
+  Info, LayoutGrid, Ruler, CheckCircle2
+} from 'lucide-react';
 
 export default function ToldosPage() {
-  // Estados de Datos Originales
   const [toldos, setToldos] = useState<ToldoDTO[]>([]);
   const [busqueda, setBusqueda] = useState('');
   const [loading, setLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-
-  // Estados de Modales Originales
   const [toldoPreview, setToldoPreview] = useState<ToldoDTO | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [idEditando, setIdEditando] = useState<number | null>(null);
 
-  // Estados del Formulario Originales
   const [archivo, setArchivo] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [form, setForm] = useState<ToldoCreateDTO>({
-    modelo: '',
-    descripcion: '',
-    precioAlquiler: 0
+    modelo: '', descripcion: '', precioAlquiler: 0
   });
 
-  // Referencia para controlar el scroll de la galería
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => { cargarToldos(); }, []);
@@ -34,13 +31,11 @@ export default function ToldosPage() {
       setLoading(true);
       const data = await toldoService.getAll();
       setToldos(data);
-    } catch (error) {
-      console.error("Error cargando toldos", error);
-    } finally { setLoading(false); }
+    } catch (error) { console.error(error); } finally { setLoading(false); }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
+    if (e.target.files?.[0]) {
       const file = e.target.files[0];
       setArchivo(file);
       setPreviewUrl(URL.createObjectURL(file));
@@ -49,12 +44,8 @@ export default function ToldosPage() {
 
   const prepararEdicion = (t: ToldoDTO) => {
     setIdEditando(t.idToldo);
-    setForm({
-      modelo: t.modelo,
-      descripcion: t.descripcion || '',
-      precioAlquiler: t.precioAlquiler
-    });
-    setPreviewUrl(t.imagenes && t.imagenes.length > 0 ? t.imagenes[0].url : null);
+    setForm({ modelo: t.modelo, descripcion: t.descripcion || '', precioAlquiler: t.precioAlquiler });
+    setPreviewUrl(t.imagenes?.length ? t.imagenes[0].url : null);
     setIsModalOpen(true);
   };
 
@@ -63,30 +54,21 @@ export default function ToldosPage() {
     setIsSaving(true);
     try {
       let result;
-      if (idEditando) {
-        result = await toldoService.update(idEditando, form);
-      } else {
-        result = await toldoService.create(form);
-      }
+      if (idEditando) result = await toldoService.update(idEditando, form);
+      else result = await toldoService.create(form);
 
       if (archivo && (result?.idToldo || idEditando)) {
-        const idFinal = idEditando || result.idToldo;
         const fd = new FormData();
         fd.append('Archivo', archivo);
         fd.append('TipoEntidad', 'TOLDO'); 
-        fd.append('IdEntidad', idFinal.toString());
-        fd.append('Descripcion', `Imagen de ${form.modelo}`);
+        fd.append('IdEntidad', (idEditando || result.idToldo).toString());
+        fd.append('Descripcion', `Modelo ${form.modelo}`);
         await imagenService.upload(fd);
       }
-
       setIsModalOpen(false);
       resetForm();
       await cargarToldos();
-    } catch (error) {
-      alert("Error al procesar el modelo de toldo");
-    } finally {
-      setIsSaving(false);
-    }
+    } catch (error) { alert("Error al guardar estructura"); } finally { setIsSaving(false); }
   };
 
   const resetForm = () => {
@@ -97,13 +79,11 @@ export default function ToldosPage() {
   };
 
   const handleEliminar = async (id: number) => {
-    if (confirm("¿Eliminar esta estructura del catálogo?")) {
+    if (confirm("¿Retirar esta estructura del catálogo?")) {
       try {
         await toldoService.delete(id);
         await cargarToldos();
-      } catch (error) {
-        alert("Error al eliminar");
-      }
+      } catch (error) { alert("Error al eliminar"); }
     }
   };
 
@@ -121,200 +101,233 @@ export default function ToldosPage() {
   );
 
   return (
-    <div className="space-y-6 pb-10">
-      {/* HEADER RESPONSIVO */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+    <div className="space-y-8 pb-20 animate-in fade-in duration-700">
+      
+      {/* 1. HEADER ESTRATÉGICO */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h2 className="text-xl md:text-2xl font-black text-gray-800 dark:text-slate-100 uppercase italic tracking-tighter">Gestión de Toldos</h2>
-          <p className="hidden xs:block text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">Catálogo de estructuras y eventos</p>
+          <h2 className="text-4xl font-black text-slate-900 dark:text-white uppercase italic tracking-tighter leading-none">
+            Módulo <span className="text-blue-600">Eventos</span>
+          </h2>
+          <p className="text-slate-400 font-bold text-[10px] uppercase tracking-[0.3em] mt-2 flex items-center gap-2">
+            <Tent size={12}/> Alquiler de Estructuras y Toldos
+          </p>
         </div>
         <button
           onClick={() => { resetForm(); setIsModalOpen(true); }}
-          className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 font-black transition-all active:scale-95 shadow-lg uppercase text-[10px]"
+          className="group bg-slate-900 dark:bg-blue-600 text-white px-8 py-4 rounded-2xl flex items-center justify-center gap-3 font-black transition-all hover:shadow-2xl hover:shadow-blue-500/20 active:scale-95 shadow-xl uppercase text-xs tracking-widest"
         >
-          <Plus size={18} /> Nuevo Modelo
+          <Plus size={20} strokeWidth={3} /> Nuevo Modelo
         </button>
       </div>
 
-      {/* BUSCADOR */}
-      <div className="relative">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-        <input
-          type="text"
-          placeholder="Buscar modelo o descripción..."
-          className="w-full pl-12 pr-4 py-4 border rounded-xl bg-white dark:bg-slate-900 border-gray-100 dark:border-slate-800 text-gray-800 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500 transition-all font-bold placeholder:text-gray-400"
-          value={busqueda}
-          onChange={(e) => setBusqueda(e.target.value)}
-        />
+      {/* 2. BUSCADOR PREMIUM */}
+      <div className="relative group">
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2.2rem] blur opacity-10 group-focus-within:opacity-25 transition duration-500"></div>
+        <div className="relative flex items-center bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] p-2 shadow-sm">
+           <Search className="ml-6 text-slate-300" size={22} />
+           <input 
+             type="text" 
+             placeholder="Buscar por modelo de estructura..." 
+             className="w-full px-4 py-4 bg-transparent outline-none font-bold text-sm dark:text-white placeholder:text-slate-300"
+             value={busqueda}
+             onChange={(e) => setBusqueda(e.target.value)}
+           />
+           <div className="hidden sm:flex items-center gap-2 mr-4 bg-slate-50 dark:bg-white/5 px-4 py-2 rounded-2xl border dark:border-slate-800">
+              <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">{filtrados.length}</span>
+              <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Modelos</span>
+           </div>
+        </div>
       </div>
 
-      {/* VISTA PC: TABLA (Tu lógica original) */}
-      <div className="hidden md:block bg-white dark:bg-slate-900 rounded-xl shadow-sm overflow-hidden border border-gray-100 dark:border-slate-800 transition-colors">
-        <table className="w-full text-left">
-          <thead className="bg-gray-50/50 dark:bg-slate-800/50 border-b dark:border-slate-800 text-[10px] font-black uppercase tracking-widest text-gray-500 dark:text-slate-400">
-            <tr>
-              <th className="px-6 py-5">Estructura / Galería</th>
-              <th className="px-6 py-5">Descripción</th>
-              <th className="px-6 py-5">Tarifa</th>
-              <th className="px-6 py-5 text-center">Acciones</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-50 dark:divide-slate-800">
-            {loading ? (
-              <tr><td colSpan={4} className="text-center py-20 text-gray-400 font-bold uppercase text-xs">Cargando Almacén...</td></tr>
-            ) : filtrados.map((t) => (
-              <tr key={t.idToldo} className="hover:bg-blue-50/30 dark:hover:bg-slate-800/50 transition-colors group">
-                <td className="px-6 py-4 flex items-center gap-4">
-                  <div className="relative w-14 h-14 flex-shrink-0">
-                    {t.imagenes?.length ? (
-                      <img src={t.imagenes[0].url} className="w-full h-full object-cover rounded-lg border shadow-sm bg-white" alt="toldo" />
-                    ) : (
-                      <div className="w-full h-full bg-gray-100 dark:bg-slate-800 rounded-lg flex items-center justify-center"><Tent size={24} className="text-gray-400" /></div>
-                    )}
-                  {(t.imagenes?.length ?? 0) > 1 && (
-                  <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[8px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-white shadow-md">
-                  +{(t.imagenes?.length ?? 0) - 1}
-                  </span>
-                  )}
-                  </div>
-                  <div className="font-black text-gray-800 dark:text-slate-100 uppercase italic">
-                    {t.modelo}
-                  </div>
-                </td>
-                <td className="px-6 py-4 font-bold text-gray-500 text-[11px] max-w-xs truncate italic">{t.descripcion}</td>
-                <td className="px-6 py-4 font-black text-blue-600 dark:text-blue-400 italic font-sans">S/ {t.precioAlquiler.toFixed(2)}</td>
-                <td className="px-6 py-4">
-                  <div className="flex justify-center gap-4">
-                    <button onClick={() => setToldoPreview(t)} className="text-gray-400 hover:text-blue-600 transition-colors"><Eye size={18}/></button>
-                    <button onClick={() => prepararEdicion(t)} className="text-gray-400 hover:text-amber-500 transition-colors"><Edit size={18}/></button>
-                    <button onClick={() => handleEliminar(t.idToldo)} className="text-gray-400 hover:text-red-600 transition-colors"><Trash2 size={18}/></button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* VISTA MÓVIL: CARDS (Igual Estándar que Mayorista/Licorería) */}
-      <div className="md:hidden space-y-4">
+      {/* 3. GRID DE TOLDOS */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {loading ? (
-          <p className="text-center py-10 text-slate-400 font-black uppercase text-[10px]">Consultando Estructuras...</p>
+          Array(4).fill(0).map((_, i) => (
+            <div key={i} className="h-80 bg-slate-100 dark:bg-slate-800/50 animate-pulse rounded-[2.5rem]" />
+          ))
         ) : filtrados.map((t) => (
-          <div key={t.idToldo} className="bg-white dark:bg-slate-900 p-4 rounded-[2rem] border border-gray-100 dark:border-slate-800 shadow-sm space-y-3">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center overflow-hidden border dark:border-slate-700">
-                {t.imagenes?.length ? (
-                  <img src={t.imagenes[0].url} className="w-full h-full object-cover" alt={t.modelo} />
-                ) : (
-                  <Tent className="text-slate-300" size={24} />
-                )}
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-black text-gray-800 dark:text-white uppercase text-sm truncate italic">{t.modelo}</h3>
-                <p className="text-[10px] text-blue-600 font-black italic">S/ {t.precioAlquiler.toFixed(2)} / día</p>
-              </div>
+          <div key={t.idToldo} className="group bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col relative">
+            
+            {/* Action Bar Overlay */}
+            <div className="absolute top-4 right-4 flex flex-col gap-2 z-20 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+               <button onClick={() => prepararEdicion(t)} className="p-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur shadow-xl rounded-xl text-amber-500 hover:bg-amber-500 hover:text-white transition-all"><Edit size={16}/></button>
+               <button onClick={() => handleEliminar(t.idToldo)} className="p-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur shadow-xl rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-all"><Trash2 size={16}/></button>
             </div>
-            <div className="flex justify-between items-center pt-3 border-t dark:border-slate-800">
-              <span className="text-[9px] font-bold text-slate-400 uppercase italic">Modelo #TD-{t.idToldo}</span>
-              <div className="flex gap-2">
-                <button onClick={() => setToldoPreview(t)} className="p-2 bg-slate-50 dark:bg-slate-800 rounded-xl text-blue-600"><Eye size={16}/></button>
-                <button onClick={() => prepararEdicion(t)} className="p-2 bg-slate-50 dark:bg-slate-800 rounded-xl text-amber-500"><Edit size={16}/></button>
-                <button onClick={() => handleEliminar(t.idToldo)} className="p-2 bg-slate-50 dark:bg-slate-800 rounded-xl text-red-500"><Trash2 size={16}/></button>
-              </div>
+
+            {/* Visual Area */}
+            <div className="h-56 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-center p-0 relative overflow-hidden">
+               {t.imagenes?.length ? (
+                 <img src={t.imagenes[0].url} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="toldo" />
+               ) : (
+                 <Tent size={48} className="text-slate-200 dark:text-slate-700" />
+               )}
+               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                  <button onClick={() => setToldoPreview(t)} className="w-full py-3 bg-white text-slate-900 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-xl flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <Eye size={14}/> Ver Detalles
+                  </button>
+               </div>
+               {(t.imagenes?.length ?? 0) > 1 && (
+                 <span className="absolute top-4 left-4 bg-blue-600/90 backdrop-blur text-white text-[9px] font-black px-3 py-1 rounded-lg border border-white/20">+{t.imagenes!.length} FOTOS</span>
+               )}
+            </div>
+
+            {/* Info Area */}
+            <div className="p-6 flex-1 flex flex-col">
+               <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-black text-slate-800 dark:text-white uppercase text-sm tracking-tight italic line-clamp-1">{t.modelo}</h3>
+                  <span className="text-[10px] font-black text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 rounded-lg border border-blue-100 dark:border-blue-800/50">#TD-{t.idToldo}</span>
+               </div>
+               <p className="text-[11px] text-slate-400 font-medium line-clamp-2 mb-6 uppercase leading-relaxed">{t.descripcion || 'Estructura modular resistente'}</p>
+               
+               <div className="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-white/5">
+                  <div className="flex flex-col">
+                    <span className="text-[8px] font-black text-slate-400 uppercase tracking-tighter leading-none">Inversión x Día</span>
+                    <span className="text-xl font-black text-slate-900 dark:text-white italic tracking-tighter">S/ {t.precioAlquiler.toFixed(2)}</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-emerald-500">
+                    <CheckCircle2 size={14} />
+                    <span className="text-[9px] font-black uppercase tracking-tighter">Disponible</span>
+                  </div>
+               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* MODAL REGISTRO/EDICIÓN ADAPTADO */}
+      {/* 4. MODAL REGISTRO/EDICIÓN - LOGISTICS STYLE */}
       {isModalOpen && (
-        <div onClick={() => setIsModalOpen(false)} className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-end sm:items-center justify-center z-[100] p-0 sm:p-4 cursor-pointer">
-          <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 rounded-t-[40px] sm:rounded-[40px] w-full max-w-xl shadow-2xl overflow-hidden transition-all animate-in slide-in-from-bottom duration-300">
-            <div className="p-6 border-b dark:border-slate-800 flex justify-between items-center bg-gray-50/50 dark:bg-slate-800/50">
-              <h3 className="text-lg font-black dark:text-white uppercase italic">{idEditando ? 'Actualizar Estructura' : 'Alta de Nuevo Modelo'}</h3>
-              <button onClick={() => setIsModalOpen(false)} className="text-gray-400 hover:text-red-500 transition-colors"><X size={24}/></button>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-md" onClick={() => setIsModalOpen(false)} />
+          <div className="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-[3rem] shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300">
+            <div className="p-8 border-b dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-white/5">
+              <div className="flex items-center gap-4">
+                 <div className="p-3 bg-blue-600 rounded-2xl text-white shadow-lg shadow-blue-200 dark:shadow-none"><Tent size={24}/></div>
+                 <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase italic tracking-tighter">Inventariar Estructura</h3>
+              </div>
+              <button onClick={() => setIsModalOpen(false)} className="p-2 hover:bg-red-50 hover:text-red-500 rounded-full transition-all"><X size={28}/></button>
             </div>
 
-            <form onSubmit={handleGuardar} className="p-6 sm:p-10 grid grid-cols-2 gap-4 sm:gap-6 max-h-[80vh] overflow-y-auto">
-              <div className="col-span-2 flex flex-col items-center border-2 border-dashed border-gray-200 dark:border-slate-700 rounded-[32px] p-6 relative bg-gray-50/30 dark:bg-slate-800/30">
-                {previewUrl ? <img src={previewUrl} className="h-32 sm:h-40 object-contain" alt="Preview" /> : (
-                  <div className="text-center py-4">
-                    <Upload className="mx-auto text-gray-300 dark:text-slate-600 mb-2" size={40} />
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">Imagen Principal</p>
+            <form onSubmit={handleGuardar} className="p-10 grid grid-cols-2 gap-8 max-h-[75vh] overflow-y-auto custom-scrollbar">
+              <div className="col-span-2 group relative h-60 bg-slate-50 dark:bg-slate-800/50 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-[2.5rem] flex flex-col items-center justify-center transition-all hover:border-blue-500 overflow-hidden shadow-inner">
+                {previewUrl ? (
+                  <img src={previewUrl} className="h-full w-full object-cover" alt="Preview" />
+                ) : (
+                  <div className="text-center">
+                    <Upload className="mx-auto text-slate-300 mb-4" size={48} />
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Cargar Galería Visual</p>
                   </div>
                 )}
                 <input type="file" accept="image/*" onChange={handleFileChange} className="absolute inset-0 opacity-0 cursor-pointer" />
               </div>
 
-              <div className="col-span-2 space-y-1">
-                <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Modelo</label>
-                <input required className="w-full bg-transparent border-b-2 border-slate-100 dark:border-slate-800 py-2 outline-none focus:border-blue-600 font-bold dark:text-white" value={form.modelo} onChange={e => setForm({...form, modelo: e.target.value})} />
+              <div className="col-span-2 space-y-2">
+                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">Nombre del Modelo / Referencia</label>
+                <input required placeholder="Ej: Toldo Árabe 10x10" className="w-full bg-slate-50 dark:bg-white/5 border-none p-4 rounded-2xl outline-none focus:ring-4 ring-blue-500/10 font-bold dark:text-white uppercase" 
+                  value={form.modelo} onChange={e => setForm({...form, modelo: e.target.value})} />
               </div>
 
-              <div className="col-span-2 space-y-1">
-                <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Descripción</label>
-                <textarea className="w-full bg-transparent border-b-2 border-slate-100 dark:border-slate-800 py-2 outline-none font-bold dark:text-white text-xs" rows={2} value={form.descripcion} onChange={e => setForm({...form, descripcion: e.target.value})} />
+              <div className="col-span-2 space-y-2">
+                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">Especificaciones Técnicas / Descripción</label>
+                <textarea rows={3} placeholder="Material, dimensiones, capacidad..." className="w-full bg-slate-50 dark:bg-white/5 border-none p-4 rounded-2xl outline-none focus:ring-4 ring-blue-500/10 font-bold dark:text-white text-xs uppercase" 
+                  value={form.descripcion} onChange={e => setForm({...form, descripcion: e.target.value})} />
               </div>
 
-              <div className="col-span-2 space-y-1">
-                <label className="text-[10px] font-black text-blue-600 uppercase tracking-widest ml-1">Precio x Día (S/)</label>
-                <input type="number" step="0.01" required className="w-full bg-transparent border-b-2 border-slate-100 dark:border-slate-800 py-2 outline-none focus:border-blue-600 text-2xl font-black dark:text-white italic font-sans" value={form.precioAlquiler} onChange={e => setForm({...form, precioAlquiler: parseFloat(e.target.value) || 0})} />
+              <div className="col-span-2 space-y-2">
+                <label className="text-[10px] font-black text-blue-600 uppercase tracking-widest ml-2">Tarifa Diaria de Alquiler (S/)</label>
+                <div className="relative">
+                  <span className="absolute left-5 top-1/2 -translate-y-1/2 font-black text-blue-400 italic">S/</span>
+                  <input type="number" step="0.01" required className="w-full bg-blue-50 dark:bg-blue-900/10 border-none pl-12 pr-5 py-5 rounded-2xl outline-none focus:ring-4 ring-blue-500/20 text-3xl font-black text-blue-600 italic tracking-tighter" 
+                    value={form.precioAlquiler} onChange={e => setForm({...form, precioAlquiler: parseFloat(e.target.value) || 0})} />
+                </div>
               </div>
 
-              <button disabled={isSaving} type="submit" className="col-span-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-4 sm:py-5 rounded-2xl uppercase text-[10px] tracking-widest transition-all shadow-xl active:scale-95 disabled:bg-gray-400">
-                {isSaving ? <Loader2 className="animate-spin mx-auto" /> : "Guardar Estructura"}
+              <button disabled={isSaving} type="submit" className="col-span-2 bg-blue-600 hover:bg-blue-700 text-white font-black py-6 rounded-[2rem] uppercase text-xs tracking-[0.3em] transition-all shadow-2xl shadow-blue-200 dark:shadow-none flex items-center justify-center gap-3 active:scale-95">
+                {isSaving ? <Loader2 className="animate-spin" size={24} /> : (
+                  <>
+                    <Calendar size={20}/>
+                    {idEditando ? "Sincronizar Disponibilidad" : "Habilitar para Alquiler"}
+                  </>
+                )}
               </button>
             </form>
           </div>
         </div>
       )}
 
-      {/* MODAL PREVIEW: GALERÍA NAVEGABLE CON BOTONES Y SNAP-SCROLL */}
+      {/* 5. PREVIEW MODAL - BOOKING STYLE CATÁLOGO */}
       {toldoPreview && (
-        <div onClick={() => setToldoPreview(null)} className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-end sm:items-center justify-center z-[110] p-0 sm:p-4 cursor-pointer">
-          <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 rounded-t-[40px] sm:rounded-3xl overflow-hidden max-w-sm w-full shadow-2xl relative animate-in slide-in-from-bottom duration-300">
-            <button onClick={() => setToldoPreview(null)} className="absolute top-4 right-4 bg-black/40 p-2 rounded-lg z-30 text-white hover:bg-black/60 transition-colors"><X size={18} /></button>
-            
-            {/* CONTENEDOR GALERÍA CON BOTONES LATERALES */}
-            <div className="relative w-full h-[300px] bg-white group/gallery">
-              <div 
-                ref={scrollRef}
-                className="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-hide border-b dark:border-slate-800"
-              >
-                {toldoPreview.imagenes?.length ? toldoPreview.imagenes.map((img, i) => (
-                  <img key={i} src={img.url} className="w-full h-full object-contain snap-center flex-shrink-0 p-6" alt="toldo" />
-                )) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center text-gray-300 font-black text-[10px] uppercase gap-2"><Tent size={40} /> Sin galería</div>
-                )}
-              </div>
-
-              {/* Botones de navegación (Aparecen al pasar el mouse en PC o siempre visibles en móvil) */}
-              {(toldoPreview.imagenes?.length ?? 0) > 1 && (
-                <>
-                  <button onClick={() => scrollGallery('left')} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all z-20"><ChevronLeft size={20}/></button>
-                  <button onClick={() => scrollGallery('right')} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all z-20"><ChevronRight size={20}/></button>
-                </>
-              )}
-            </div>
-
-            <div className="p-6 sm:p-8 space-y-6 bg-white dark:bg-slate-900">
-              <div className="space-y-1">
-                <span className="bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-md uppercase tracking-widest inline-block italic shadow-sm">Catálogo Premium</span>
-                <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight uppercase italic">{toldoPreview.modelo}</h3>
-                <p className="text-gray-400 font-bold uppercase text-[10px] tracking-widest line-clamp-2">{toldoPreview.descripcion || 'Estructura modular'}</p>
-              </div>
-
-              <div className="flex justify-between items-center py-4 border-y dark:border-slate-800 transition-colors">
-                <div><p className="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Inversión x Día</p><p className="text-2xl sm:text-3xl font-black text-blue-600 italic leading-none tracking-tighter">S/ {toldoPreview.precioAlquiler.toFixed(2)}</p></div>
-                <div className="text-right">
-                  <div className="flex items-center gap-1 text-green-500 justify-end"><Calendar size={12}/><span className="text-[10px] font-black uppercase tracking-tighter">Disponible</span></div>
-                  <p className="text-[10px] font-bold text-gray-400 uppercase mt-1 tracking-tighter italic">Almacén Central</p>
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl" onClick={() => setToldoPreview(null)} />
+          <div className="relative bg-white dark:bg-slate-900 rounded-[4rem] w-full max-w-5xl grid grid-cols-1 lg:grid-cols-5 overflow-hidden shadow-2xl animate-in slide-in-from-bottom-12 duration-500">
+             
+             {/* Galería Lateral Interactiva */}
+             <div className="lg:col-span-3 bg-black relative group/gallery h-[400px] lg:h-full">
+                <div 
+                  ref={scrollRef}
+                  className="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+                >
+                  {toldoPreview.imagenes?.length ? toldoPreview.imagenes.map((img, i) => (
+                    <img key={i} src={img.url} className="w-full h-full object-cover snap-center flex-shrink-0" alt="toldo" />
+                  )) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center text-slate-800 bg-slate-100 font-black text-[12px] uppercase gap-4 italic opacity-40">
+                      <Tent size={120} />
+                      <p>Galería No disponible</p>
+                    </div>
+                  )}
                 </div>
-              </div>
+                {(toldoPreview.imagenes?.length ?? 0) > 1 && (
+                  <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover/gallery:opacity-100 transition-opacity">
+                    <button onClick={() => scrollGallery('left')} className="p-4 bg-white/20 hover:bg-white/90 hover:text-black text-white rounded-full backdrop-blur-md transition-all shadow-2xl"><ChevronLeft size={24}/></button>
+                    <button onClick={() => scrollGallery('right')} className="p-4 bg-white/20 hover:bg-white/90 hover:text-black text-white rounded-full backdrop-blur-md transition-all shadow-2xl"><ChevronRight size={24}/></button>
+                  </div>
+                )}
+             </div>
 
-              <button className="w-full bg-gray-950 dark:bg-slate-100 text-white dark:text-slate-900 py-4 rounded-xl font-black uppercase text-[10px] tracking-widest active:scale-95 shadow-xl">Cerrar Detalle</button>
-            </div>
+             {/* Detalles en el Modal */}
+             <div className="lg:col-span-2 p-10 lg:p-14 flex flex-col justify-center space-y-8 relative bg-white dark:bg-slate-900">
+                <button onClick={() => setToldoPreview(null)} className="absolute top-8 right-8 text-slate-300 hover:text-red-500 transition-colors"><X size={32}/></button>
+                
+                <div className="space-y-4">
+                   <div className="flex items-center gap-3">
+                      <div className="bg-blue-600 h-1 w-8 rounded-full" />
+                      <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest italic">Stock de Alquiler</span>
+                   </div>
+                   <h3 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white uppercase leading-none italic tracking-tighter">{toldoPreview.modelo}</h3>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                   <div className="p-6 bg-slate-50 dark:bg-white/5 rounded-3xl border dark:border-slate-800">
+                      <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1 italic">Tarifa de Servicio</p>
+                      <p className="text-3xl font-black text-blue-600 italic leading-none tracking-tighter">S/ {toldoPreview.precioAlquiler.toFixed(2)}</p>
+                      <span className="text-[8px] font-bold text-slate-400 uppercase mt-1 inline-block">Monto diario neto</span>
+                   </div>
+                   <div className="p-6 bg-slate-50 dark:bg-white/5 rounded-3xl border dark:border-slate-800 flex flex-col justify-center items-center text-center">
+                      <LayoutGrid size={24} className="text-slate-300 mb-1" />
+                      <p className="text-[10px] font-black text-slate-900 dark:text-white uppercase leading-tight italic">Estructura Certificada</p>
+                   </div>
+                </div>
+
+                <div className="p-6 border-l-4 border-blue-600 bg-blue-500/5 rounded-r-3xl">
+                   <div className="flex items-center gap-2 mb-1">
+                      <Info size={14} className="text-blue-600"/>
+                      <p className="text-xs font-black text-blue-600 uppercase tracking-tighter">Memoria de Calidad:</p>
+                   </div>
+                   <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-bold uppercase italic">
+                      {toldoPreview.descripcion || 'Estructura modular de alta resistencia, diseñada para eventos corporativos y sociales de gran escala.'}
+                   </p>
+                </div>
+
+                <div className="grid grid-cols-3 gap-4 border-y dark:border-slate-800 py-6">
+                   <div className="text-center"><Ruler size={16} className="mx-auto text-slate-300 mb-1"/><p className="text-[8px] font-black text-slate-400 uppercase tracking-tighter">Modular</p></div>
+                   <div className="text-center border-x dark:border-slate-800 px-2"><Tent size={16} className="mx-auto text-slate-300 mb-1"/><p className="text-[8px] font-black text-slate-400 uppercase tracking-tighter">Impermeable</p></div>
+                   <div className="text-center"><Calendar size={16} className="mx-auto text-slate-300 mb-1"/><p className="text-[8px] font-black text-slate-400 uppercase tracking-tighter">Habilitado</p></div>
+                </div>
+
+                <button onClick={() => setToldoPreview(null)} className="w-full bg-slate-950 text-white py-6 rounded-3xl font-black uppercase text-xs tracking-[0.4em] flex items-center justify-center gap-3 transition-all hover:bg-blue-600 hover:shadow-2xl shadow-blue-500/20 active:scale-95 shadow-xl">
+                   Cerrar Catálogo <ChevronRight size={18}/>
+                </button>
+             </div>
           </div>
         </div>
       )}

@@ -2,13 +2,9 @@
 import { useEffect, useState } from 'react';
 import { mayoristaService, ProductoMayoristaDTO } from '@/services';
 import { 
-  ShoppingBag, 
-  ChevronRight, 
-  Zap, 
-  ShieldCheck, 
-  Truck, 
-  Package, 
-  MessageCircle 
+  ShoppingBag, ChevronRight, Zap, ShieldCheck, 
+  Truck, Package, MessageCircle, Boxes, 
+  BarChart3, BadgeCheck, ArrowDownToLine 
 } from 'lucide-react';
 
 export default function UserMayoristaPage() {
@@ -21,7 +17,7 @@ export default function UserMayoristaPage() {
         const data = await mayoristaService.getAll();
         setProductos(data);
       } catch (error) {
-        console.error("Error cargando catálogo", error);
+        console.error("Error catálogo mayorista", error);
       } finally {
         setLoading(false);
       }
@@ -29,139 +25,152 @@ export default function UserMayoristaPage() {
     load();
   }, []);
 
-  // Función para contactar por WhatsApp (Número: 902 488 881)
   const handleWhatsAppContact = (producto: ProductoMayoristaDTO) => {
-    const message = `Hola Kemak Corporación, solicito información sobre el producto mayorista: ${producto.nombre} (${producto.marca}). ¿Qué precio me dejan por cajón o cantidad mayor?`;
-    const whatsappUrl = `https://wa.me/51902488881?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const message = `¡Hola Kemak! 📦 Solicito cotización por volumen del producto: ${producto.nombre} (${producto.marca}). Presentación: ${producto.presentacion}. ¿Qué beneficios ofrecen por compras mayores?`;
+    window.open(`https://wa.me/51902488881?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
-    <div className="min-h-screen pb-20">
-      {/* SECCIÓN HERO: TEXTO DE ENTRADA IMPACTANTE */}
-      <div className="bg-white border-b border-slate-100 py-16 px-6">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4">
-            <Zap size={14} /> Distribución hasta la puerta de tu Cerro
+    <div className="min-h-screen pb-20 bg-[#F8FAFC]">
+      
+      {/* --- INDUSTRIAL HERO SECTION --- */}
+      <div className="bg-slate-900 py-24 px-6 relative overflow-hidden">
+        {/* Decoración geométrica de fondo */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px] -mr-40 -mt-40" />
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col items-center text-center space-y-6">
+            <div className="inline-flex items-center gap-2 bg-orange-600 text-white px-5 py-2 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl shadow-orange-600/20">
+              <Boxes size={14} /> Canal de Distribución Oficial
+            </div>
+            
+            <h2 className="text-5xl md:text-8xl font-black text-white uppercase italic tracking-tighter leading-[0.85]">
+              Abastece tu <br /> <span className="text-orange-500">Negocio</span>
+            </h2>
+            
+            <p className="text-slate-400 font-medium max-w-2xl mx-auto text-sm md:text-lg leading-relaxed uppercase tracking-tight">
+              Precios de fábrica, logística integrada y stock permanente. Somos el aliado estratégico que tu empresa necesita para crecer.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6 pt-12">
+               <HeroFeature icon={<ShieldCheck />} label="Calidad Certificada" />
+               <HeroFeature icon={<Truck />} label="Logística Propia" />
+               <HeroFeature icon={<BarChart3 />} label="Precios Escalamiento" />
+            </div>
           </div>
-          <h2 className="text-5xl md:text-7xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">
-            Venta Mayorista <br /> <span className="text-orange-600">& Minorista</span>
-          </h2>
-          <p className="text-slate-500 font-bold max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-            Potencia tu negocio con nuestro catálogo mayorista. Precios competitivos, logística de alto nivel y stock garantizado para tu empresa o evento.
-          </p>
+        </div>
+      </div>
+
+      {/* --- CATÁLOGO MAYORISTA --- */}
+      <div className="max-w-7xl mx-auto p-6 md:p-12 -mt-12 relative z-20">
+        <div className="bg-white rounded-[3.5rem] p-8 md:p-16 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border border-slate-100">
           
-          <div className="flex justify-center gap-8 pt-8 border-t border-slate-50 mt-10">
-            <div className="flex flex-col items-center gap-1">
-               <ShieldCheck className="text-orange-500" size={24} />
-               <span className="text-[9px] font-black uppercase text-slate-400">Garantía Total</span>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="space-y-2">
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">Lotes Disponibles</h3>
+              <p className="text-[11px] text-slate-400 font-black uppercase tracking-[0.3em] flex items-center gap-2">
+                <BadgeCheck size={14} className="text-orange-500"/> Stock actualizado al 2026
+              </p>
             </div>
-            <div className="flex flex-col items-center gap-1">
-               <Truck className="text-orange-500" size={24} />
-               <span className="text-[9px] font-black uppercase text-slate-400">Envíos Rápidos</span>
-            </div>
+            <button className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-orange-600 transition-colors">
+               Descargar Tarifario <ArrowDownToLine size={16}/>
+            </button>
           </div>
+
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {[1, 2, 3].map(i => (
+                <div key={i} className="bg-slate-50 h-[400px] rounded-[3rem] animate-pulse border border-slate-100" />
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+              {productos.map((p) => (
+                <div key={p.idProducto} className="group flex flex-col bg-white rounded-[3rem] border border-transparent hover:border-slate-100 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] transition-all duration-500 p-2">
+                  
+                  {/* IMAGEN DE PRODUCTO */}
+                  <div className="h-72 bg-[#F1F5F9] rounded-[2.8rem] flex items-center justify-center p-12 relative overflow-hidden group-hover:bg-white transition-colors">
+                    {/* Badge de Stock */}
+                    <div className="absolute top-6 left-6 z-10 flex items-center gap-2 bg-white px-4 py-2 rounded-2xl shadow-sm border border-slate-100">
+                       <div className={`w-2 h-2 rounded-full ${p.stock > 10 ? 'bg-emerald-500' : 'bg-red-500 animate-pulse'}`} />
+                       <span className="text-[9px] font-black uppercase tracking-tighter text-slate-600">Stock: {p.stock}</span>
+                    </div>
+
+                    {p.imagenes && p.imagenes.length > 0 ? (
+                      <img 
+                        src={p.imagenes[0].url} 
+                        className="h-full w-full object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-110" 
+                        alt={p.nombre} 
+                      />
+                    ) : (
+                      <Package className="text-slate-300" size={80} strokeWidth={1} />
+                    )}
+
+                    {p.stock === 0 && (
+                      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center">
+                        <span className="bg-slate-900 text-white text-[10px] font-black px-6 py-2.5 rounded-full uppercase tracking-[0.2em] shadow-2xl">Sin Existencias</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* INFO Y COTIZACIÓN */}
+                  <div className="p-8 flex-1 flex flex-col space-y-6">
+                    <div className="space-y-2">
+                      <p className="text-orange-600 font-black text-[10px] uppercase tracking-[0.2em]">{p.marca}</p>
+                      <h4 className="text-2xl font-black text-slate-900 uppercase italic tracking-tighter leading-tight group-hover:text-orange-600 transition-colors">
+                        {p.nombre}
+                      </h4>
+                      <span className="inline-block px-3 py-1 bg-slate-900 text-white text-[9px] font-black rounded-lg uppercase tracking-widest">
+                        {p.presentacion}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-6 border-t border-slate-50">
+                      <div className="flex flex-col">
+                        <span className="text-[9px] font-black text-slate-400 uppercase">Precio Referencial</span>
+                        <p className="text-3xl font-black text-slate-900 italic tracking-tighter leading-none">
+                          S/ {p.precio.toFixed(2)}
+                        </p>
+                      </div>
+                      
+                      <button 
+                        onClick={() => handleWhatsAppContact(p)}
+                        className="p-5 bg-slate-100 hover:bg-green-500 text-slate-400 hover:text-white rounded-[2rem] transition-all group/btn active:scale-90"
+                      >
+                        <MessageCircle size={24} className="group-hover/btn:scale-110 transition-transform" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      {/* CUERPO DEL CATÁLOGO */}
-      <div className="max-w-7xl mx-auto p-6 md:p-12">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h3 className="text-2xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">Productos Destacados</h3>
-            <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1">Nuestra selección para tu stock</p>
-          </div>
-          <div className="h-1 w-24 bg-orange-500 rounded-full" />
-        </div>
-
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[1, 2, 3, 4, 5, 6].map(i => (
-              <div key={i} className="bg-white h-96 rounded-[2.5rem] animate-pulse shadow-sm border border-slate-100" />
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {productos.map((p) => (
-              <div key={p.idProducto} className="group relative bg-white rounded-[2.5rem] p-4 shadow-xl shadow-slate-200/50 border border-slate-50 transition-all duration-500 hover:-translate-y-2 hover:shadow-orange-200/40">
-                
-                {/* CONTENEDOR DE IMAGEN */}
-                <div className="h-64 bg-slate-50 rounded-[2rem] flex items-center justify-center p-8 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
-                  {/* BADGE DE STOCK FLOTANTE */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-100 shadow-sm z-10">
-                    <Package size={12} className="text-orange-500" />
-                    <span className={`text-[10px] font-black uppercase tracking-tighter ${p.stock < 10 ? 'text-red-500' : 'text-slate-700'}`}>
-                      Stock: {p.stock}
-                    </span>
-                  </div>
-
-                  {p.imagenes && p.imagenes.length > 0 ? (
-                    <img 
-                      src={p.imagenes[0].url} 
-                      className="h-full object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110" 
-                      alt={p.nombre} 
-                    />
-                  ) : (
-                    <ShoppingBag className="text-slate-200" size={80} />
-                  )}
-
-                  {p.stock < 10 && p.stock > 0 && (
-                    <span className="absolute top-4 right-4 bg-red-500 text-white text-[8px] font-black px-3 py-1 rounded-full uppercase italic animate-bounce">¡Se agota!</span>
-                  )}
-                  {p.stock === 0 && (
-                    <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px] flex items-center justify-center">
-                       <span className="bg-slate-900 text-white text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest">Sin Stock</span>
-                    </div>
-                  )}
-                </div>
-
-                {/* INFO DEL PRODUCTO */}
-                <div className="p-6 space-y-4">
-                  <div className="flex justify-between items-start">
-                    <div className="space-y-1">
-                      <p className="text-orange-600 font-black text-[9px] uppercase tracking-[0.2em]">{p.marca}</p>
-                      <h3 className="text-xl font-black text-slate-900 uppercase leading-tight group-hover:text-orange-600 transition-colors line-clamp-1">{p.nombre}</h3>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <span className="bg-slate-100 text-slate-500 text-[10px] font-bold px-3 py-1 rounded-lg uppercase tracking-tighter">
-                      {p.presentacion}
-                    </span>
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-50 flex justify-between items-center">
-                    <div>
-                      <p className="text-[9px] font-black text-slate-400 uppercase tracking-tighter">Precio Unitario</p>
-                      <p className="text-3xl font-black text-slate-900 italic font-sans tracking-tighter">
-                        S/ {p.precio.toFixed(2)}
-                      </p>
-                    </div>
-                    
-                    {/* BOTÓN WHATSAPP */}
-                    <button 
-                      onClick={() => handleWhatsAppContact(p)}
-                      disabled={p.stock === 0}
-                      className={`flex items-center gap-2 p-4 rounded-2xl transition-all shadow-lg active:scale-90 ${
-                        p.stock === 0 
-                        ? 'bg-slate-100 text-slate-300 cursor-not-allowed' 
-                        : 'bg-slate-900 text-white hover:bg-green-600'
-                      }`}
-                      title="Pedir por WhatsApp"
-                    >
-                      <MessageCircle size={20} />
-                      <span className="hidden group-hover:block text-[10px] font-black uppercase tracking-widest">Consultar</span>
-                      <ChevronRight size={18} className="group-hover:hidden" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+      {/* --- CALL TO ACTION INFERIOR --- */}
+      <div className="max-w-5xl mx-auto px-6 mt-10">
+         <div className="bg-orange-600 rounded-[3.5rem] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl shadow-orange-600/30">
+            <div className="text-center md:text-left space-y-2">
+               <h4 className="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter leading-none">¿Pedido Especial?</h4>
+               <p className="text-orange-100 font-bold text-sm uppercase tracking-widest">Atención personalizada para compras por pallet o carga completa</p>
+            </div>
+            <button className="bg-slate-950 text-white px-10 py-6 rounded-3xl font-black uppercase text-xs tracking-[0.3em] hover:bg-white hover:text-slate-950 transition-all shadow-2xl">
+               Contactar Mayorista
+            </button>
+         </div>
       </div>
+    </div>
+  );
+}
+
+// Sub-componentes para limpieza visual
+function HeroFeature({ icon, label }: { icon: any, label: string }) {
+  return (
+    <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3 rounded-2xl backdrop-blur-sm group hover:bg-white/10 transition-all cursor-default">
+       <div className="text-orange-500 group-hover:scale-110 transition-transform">{icon}</div>
+       <span className="text-[10px] font-black text-white uppercase tracking-widest">{label}</span>
     </div>
   );
 }

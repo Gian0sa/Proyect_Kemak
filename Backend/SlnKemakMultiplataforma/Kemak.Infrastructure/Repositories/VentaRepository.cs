@@ -178,8 +178,20 @@ public class VentaRepository : IVentaRepository
             .ToListAsync();
 
     public async Task<Ventum?> GetVentaByIdAsync(int id)
-        => await _context.Venta
-            .Include(v => v.DetalleVenta)
-            .Include(v => v.IdClienteNavigation)
-            .FirstOrDefaultAsync(v => v.IdVenta == id);
+     => await _context.Venta
+         .Include(v => v.IdClienteNavigation)
+         .Include(v => v.IdUsuarioNavigation)
+         .Include(v => v.DetalleVenta)
+             .ThenInclude(d => d.IdItemNavigation)
+                 .ThenInclude(i => i.ItemProductoLicorerium)
+                     .ThenInclude(l => l.IdProductoNavigation) // Nombre Licorería
+         .Include(v => v.DetalleVenta)
+             .ThenInclude(d => d.IdItemNavigation)
+                 .ThenInclude(i => i.ItemProductoMayoristum)
+                     .ThenInclude(m => m.IdProductoNavigation) // Nombre Mayorista
+         .Include(v => v.DetalleVenta)
+             .ThenInclude(d => d.IdItemNavigation)
+                 .ThenInclude(i => i.ItemToldo)
+                     .ThenInclude(t => t.IdToldoNavigation) // Modelo Toldo
+         .FirstOrDefaultAsync(v => v.IdVenta == id);
 }

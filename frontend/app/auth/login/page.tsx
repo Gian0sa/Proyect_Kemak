@@ -5,13 +5,8 @@ import { useAuth } from '@/store/AuthContext';
 import { useRouter } from 'next/navigation';
 import { signIn, useSession } from 'next-auth/react';
 import { 
-  Loader2, 
-  Lock, 
-  Mail, 
-  ArrowLeft, 
-  UserPlus, 
-  ChevronRight,
-  ShieldCheck
+  Loader2, Lock, Mail, ArrowLeft, UserPlus, 
+  ChevronRight, ShieldCheck
 } from 'lucide-react'; 
 import Link from 'next/link'; 
 
@@ -20,18 +15,19 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false); // Estado para la carga de Google
   
   const { login } = useAuth();
   const router = useRouter();
   const { data: session, status } = useSession();
 
-  // EFECTO DE SINCRONIZACIÓN GOOGLE -> KEMAK Context
   useEffect(() => {
-    // Si la sesión de Google está activa
+    // Si status es loading, significa que NextAuth está verificando la cookie
+    if (status === 'loading') return;
+
     if (status === 'authenticated' && session?.user) {
+      setIsSyncing(true); // Activamos pantalla de carga
       
-      // Verificamos si ya tenemos los datos en localStorage
-      // Esto evita que el loop se ejecute si ya estamos dentro
       const currentAuth = localStorage.getItem('auth');
       
       if (!currentAuth) {
@@ -43,13 +39,18 @@ export default function LoginPage() {
           email: sessionUser.email || '',
         };
 
-        localStorage.setItem('auth', JSON.stringify(dataParaContext));
-        login(dataParaContext);
+        // Simulamos un pequeño delay para que la pantalla de carga se vea (opcional)
+        setTimeout(() => {
+          localStorage.setItem('auth', JSON.stringify(dataParaContext));
+          login(dataParaContext);
 
-        const isAdmin = dataParaContext.roles?.some((role: string) => 
-          role.toLowerCase() === 'admin'
-        );
-        router.push(isAdmin ? '/dashboard' : '/');
+          const isAdmin = dataParaContext.roles?.some((role: string) => 
+            role.toLowerCase() === 'admin'
+          );
+          router.push(isAdmin ? '/dashboard' : '/');
+        }, 1500);
+      } else {
+        setIsSyncing(false);
       }
     }
   }, [status, session, login, router]);
@@ -58,7 +59,6 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError('');
-
     try {
       const data = await authService.login({ email, password }); 
       login(data);
@@ -66,7 +66,6 @@ export default function LoginPage() {
       router.push(isAdmin ? '/dashboard' : '/'); 
     } catch (err: any) {
       setError(err.response?.data?.mensaje || 'Credenciales incorrectas');
-    } finally {
       setLoading(false);
     }
   };
@@ -74,15 +73,34 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f8fafc] p-6 relative overflow-hidden font-sans">
       
+      {/* PANTALLA DE CARGA PARA GOOGLE (OVERLAY) */}
+      {isSyncing && (
+        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white/90 backdrop-blur-md animate-in fade-in duration-500">
+          <div className="relative">
+            <div className="w-24 h-24 border-4 border-orange-100 border-t-orange-600 rounded-full animate-spin"></div>
+            <img 
+              src="https://www.svgrepo.com/show/475656/google-color.svg" 
+              className="absolute inset-0 m-auto w-10 h-10 animate-pulse" 
+              alt="Google" 
+            />
+          </div>
+          <h2 className="mt-8 text-2xl font-black text-slate-900 italic uppercase tracking-tighter">
+            Sincronizando con <span className="text-orange-600">Google</span>
+          </h2>
+          <p className="mt-2 text-slate-400 font-bold text-[10px] uppercase tracking-[0.3em] animate-bounce">
+            Preparando tu acceso corporativo...
+          </p>
+        </div>
+      )}
+
+      {/* FONDO DINÁMICO */}
       <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-100 rounded-full blur-[120px] opacity-60" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] opacity-60" />
       </div>
 
-      <Link 
-        href="/" 
-        className="absolute top-10 left-10 z-20 flex items-center gap-3 text-slate-400 hover:text-orange-600 transition-all group"
-      >
+      {/* BOTÓN VOLVER */}
+      <Link href="/" className="absolute top-10 left-10 z-20 flex items-center gap-3 text-slate-400 hover:text-orange-600 transition-all group">
         <div className="p-3 bg-white rounded-2xl shadow-sm group-hover:shadow-orange-200 group-hover:shadow-lg transition-all border border-slate-100">
           <ArrowLeft size={18} />
         </div>
@@ -105,7 +123,7 @@ export default function LoginPage() {
           </div>
           
           {error && (
-            <div className="bg-red-50 border border-red-100 text-red-600 p-4 mb-8 rounded-2xl text-xs font-black uppercase tracking-tight flex items-center gap-3">
+            <div className="bg-red-50 border border-red-100 text-red-600 p-4 mb-8 rounded-2xl text-xs font-black uppercase tracking-tight flex items-center gap-3 animate-shake">
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               {error}
             </div>
@@ -128,7 +146,7 @@ export default function LoginPage() {
             </div>
 
             <div className="group space-y-2">
-              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Contraseña</label>
+              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4 group-focus-within:text-orange-600 transition-colors">Contraseña</label>
               <div className="relative">
                 <Lock className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-orange-500 transition-colors" size={20} />
                 <input
@@ -145,9 +163,19 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-slate-900 hover:bg-orange-600 text-white font-black py-6 rounded-[2rem] shadow-xl transition-all flex items-center justify-center gap-3 uppercase text-xs tracking-[0.2em]"
+              className="w-full bg-slate-900 hover:bg-orange-600 text-white font-black py-6 rounded-[2rem] shadow-xl transition-all flex items-center justify-center gap-3 uppercase text-xs tracking-[0.2em] group"
             >
-              {loading ? <Loader2 className="animate-spin" size={20} /> : "Entrar al Sistema"}
+              {loading ? (
+                <>
+                  <Loader2 className="animate-spin" size={20} />
+                  Verificando Credenciales...
+                </>
+              ) : (
+                <>
+                  Entrar al Sistema
+                  <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
           </form>
 

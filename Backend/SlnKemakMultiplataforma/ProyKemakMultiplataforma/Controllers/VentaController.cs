@@ -90,13 +90,72 @@ public class VentaController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll() => Ok(await _ventaRepository.GetAllVentasAsync());
+    public async Task<IActionResult> GetAll()
+    {
+        var ventas = await _ventaRepository.GetAllVentasAsync();
+
+        // Mapeamos a un objeto anónimo que incluya los nombres
+        // Nota: Asegúrate de que tu repositorio cargue las navegaciones de Cliente y Usuario
+        var respuesta = ventas.Select(v => new {
+            idVenta = v.IdVenta,
+            fechaVenta = v.Fecha,
+            tipoVenta = v.TipoVenta,
+            montoTotal = v.Total,
+            // Si tienes las relaciones configuradas:
+            clienteNombre = v.IdClienteNavigation?.Nombre ?? "Cliente General",
+            clienteDni = v.IdClienteNavigation?.Dni ?? "---",
+            usuarioNombre = v.IdUsuarioNavigation?.Username ?? "Sistema"
+        });
+
+        return Ok(respuesta);
+    }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
+        // 1. Obtenemos la venta con sus navegaciones básicas
         var venta = await _ventaRepository.GetVentaByIdAsync(id);
-        return venta == null ? NotFound() : Ok(venta);
+        if (venta == null) return NotFound();
+
+        // 2. Mapeamos los detalles buscando el nombre real en las tablas hijas
+        var detallesConNombre = venta.DetalleVenta.Select(d => {
+            string nombreReal = $"Producto #{d.IdItem}"; // Fallback por defecto
+
+            if (d.IdItemNavigation != null)
+            {
+                // Buscamos según el tipo de ítem definido en tu ItemVentum
+                nombreReal = d.IdItemNavigation.TipoItem switch
+                {
+                    "LICORERIA" => d.IdItemNavigation.ItemProductoLicorerium?.IdProductoNavigation?.Nombre,
+                    "MAYORISTA" => d.IdItemNavigation.ItemProductoMayoristum?.IdProductoNavigation?.Nombre,
+                    "TOLDO" => d.IdItemNavigation.ItemToldo?.IdToldoNavigation?.Modelo,
+                    _ => nombreReal
+                } ?? nombreReal;
+            }
+
+            return new
+            {
+                productoNombre = nombreReal,
+                cantidad = d.Cantidad,
+                precioUnitario = d.PrecioUnitario,
+                subtotal = d.Cantidad * d.PrecioUnitario
+            };
+        }).ToList();
+
+        // 3. Respuesta final limpia para el Front
+        var result = new
+        {
+            idVenta = venta.IdVenta,
+            fechaVenta = venta.Fecha,
+            montoTotal = venta.Total,
+            clienteNombre = venta.IdClienteNavigation?.Nombre ?? "PÚBLICO GENERAL",
+            clienteDni = venta.IdClienteNavigation?.Dni ?? "---",
+            usuarioNombre = venta.IdUsuarioNavigation?.Username ?? "SISTEMA",
+            tipoVenta = venta.TipoVenta,
+            detalles = detallesConNombre
+        };
+
+        return Ok(result);
     }
 
     [HttpPatch("registrar-devolucion")]
